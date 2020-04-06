@@ -1,0 +1,5 @@
+Tela inicial - buttons: Iniciar sexta-feira, Adicionar Tarefa, Adicionar lembrete, Adicionar Projeto, 
+
+Cada botao chama a activity correspondente 
+
+ 

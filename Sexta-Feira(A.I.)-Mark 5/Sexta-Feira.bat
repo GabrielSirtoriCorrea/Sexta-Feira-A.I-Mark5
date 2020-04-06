@@ -1,0 +1,1 @@
+"E:\Sexta-Feira(A.I.)-Mark 5\Sexta-Feira_Artificial_Inteligence\Sexta-Feira_Executable.py"

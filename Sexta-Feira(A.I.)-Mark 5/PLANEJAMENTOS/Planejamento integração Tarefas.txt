@@ -1,0 +1,19 @@
+/////////////////////////////////////////////////////Planejamento integração Tarefas\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+		
+Client -----SOCKET------- Server ------------INSERT-------------- Commands DataBase 
+(APP)						                    |
+					                                      |
+Sexta-Feira(A.I) -------------------------------SELECT----- ----------------------|
+ (INTERFACE)
+
+
+APP:
+	Entrys: type, subject, homework, delivery, desciption
+	Buttons: Send
+
+Funcionamento:
+	Enviar para o servidor um json com os dados informados
+	Servidor recebe os dados e envia para o DataBase
+	Quando solicitado, Sexta-Feira(A.I) retira esses dados do DataBase
+	

@@ -1,0 +1,22 @@
+////////////////////////////////////////////////////////////Planejamento integração Projetos\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+requisição = Reconhecimento de fala
+
+-Criar pasta Sexta-Feira Projects 
+
+Sexta-Feira Projects - Irá armazenar todos os projetos baixados de repositórios no github
+
+Interação entre computadores:
+	Micro Servidor rodando em backdoor no computador local
+                  Computador da Sexta-Feira envia comandos para o computador local via socket
+	Computador local executa 
+
+Criar um projeto:
+	- Requirir Nome do projeto e platafomas
+	- Criar repositório no github (Selenium)
+                  - Enviar comandos para criar arquivos (Sexta-Feira para computador local via sockets)
+                  - Computador local executa os comandos
+
+Abrir/Salvar projetos: 
+	- Enviar comandos para abrir arquivos (Sexta-Feira para computador local via sockets)
+                  - Computador local executa os comandos

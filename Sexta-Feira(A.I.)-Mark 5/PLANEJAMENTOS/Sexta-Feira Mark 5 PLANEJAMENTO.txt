@@ -1,0 +1,119 @@
+//////////////////////////////////////////////////////////////////F.R.I.D.A.Y\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Arquivos .py:
+	
+	Sexta feira SQL INJECT - Injeta dados no banco
+	Sexta Feira A.I. - Extrai esses dados do banco
+	Functions - Armazena as funções do sistema
+	Commands - Armazena todos os comandos
+	Prototyping - Arquivo para testes e protótipos
+
+Commands - Todas os métodos teram o argumento String Default, na qual o método usará 
+	quando precisar de utilizar algo do reconhecimento
+
+
+Sexta Feira SQL INJECT ---------------------------------------------------------
+							| 		
+					      ------- Sexta-Feira Interaction SQL                                                                
+				                        |        
+                                                                                        	      -------	Sexta-Feira Methods SQL 
+                                                                                                |	
+Sexta Feira A.I. ------------------------------------------------
+
+Bancos de Dados SQL
+
+	Sexta-Feira Interaction SQL
+	
+		Tabelas:
+	
+			  Chat:        Keyword1		Commands: Keyword1
+	               			Keyword2			 Keyword2
+	                			Keyword3		 	 Keyword3
+                              	    		Response1			 Command
+	               			Response2
+                                  			Response3
+	
+	Sexta-Feira Commands SQL
+		
+		Tabelas:
+			
+			Projects:     NameProject	Reminder: ReminderName	HomeWorkManagement: HomeWorkType
+				ProjectPlatform	                Time				   Subject
+				ProjectFiles	                 Date			                     HomeWork
+											   Delivery
+											   HomeWork Description
+							
+Funcionamento:
+
+	Conversa:
+		Reconhecimento de voz
+		Busca no banco de dados as palavras chave que estao na fala
+		Extrai a resposta do banco de dados
+		Diz a resposta
+
+	Comandos:
+		Armazena em um dicionário todas os comandos e o ID de todos eles
+		Reconhecimento de voz
+		Busca no banco de dados as palavras chave que estao na fala
+		Extrai o ID da função correspondente ao comando do banco de dados
+		Através do dicionário, chama a função com o ID correspondente
+		Executa a função
+
+
+Comandos interessantes:
+	
+	Criação de projetos- Sexta-Feira solicita o nome e a plataforma em que o projeto será criado,
+		               cria os arquivos necessarios e armazena o nome deles no BD.
+			
+	Abrir projetos - Sexta-Feira solicita o nome do projeto, acessa o BD, busca pelo projeto, e
+		       abre todos os arquivos vinculados
+ 	
+	Lembrete - Sexta-Feira solicita a hora e o que deve ser lembrado, armazena no BD, e a cada minuto
+		ve se existe algum lembrete marcado na hora atual, se existir, da o aviso
+
+	Gerenciamento de Tarefas - Sexta-Feira Retira do BD informações das tarefas a serem realizadas,
+		                         que foram Inseridas através do Aplicativo e Mostra-as quando solicitado					       
+	
+
+Algoritimo:
+
+Importação de bibliotecas
+
+ResponseSelector = Random de 3 a 5
+
+MethodsDict = {"ID": Methods.Metodo}
+CommandList  = [palavras chave 1, 2 e 3, ID da Função, ID da Função] RETIRAR DO BANCO DE DADOS
+ChatList = [palavras chave 1, 2 e 3, respostas 1, 2 e 3]RETIRAR DO BANCO DE DADOS
+
+UserInteractions = [CommandList, ChatList]
+
+ResponseAccept = False
+
+while True
+	speech = Recognition()
+
+	for UserInteraction in UserInteractions:
+		for Interaction in UserInteraction:
+			IF interaction[0] in speech and interaction[1] in speech and interaction[2] in speech and interaction in getChat()
+				speak(Interaction[ResponseSelector])
+				
+			ELIF interaction[0] in speech and interaction[1] in speech and interaction[2] in speech and interaction in getCommandRequests()
+				callCommands[interaction[3]]			
+			
+
+
+
+
+
+
+			for keyword in Interaction[0:3]:
+				IF keyword in speech:
+					ResponseAccept = True
+				Else:
+					ResponseAccept = False	
+
+			IF ResponseAccept and UserInteraction[0][0][0] = "Cabeçalho Conversas":
+				speak(Interaction[ResponseSelector])
+
+			IF ResponseAccept and UserInteraction[1][0][0] = "Cabeçalho Comandos"::				
+				MethodsDict[Interaction[Response selector]]()
